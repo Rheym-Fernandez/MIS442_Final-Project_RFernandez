@@ -77,10 +77,10 @@ namespace BitsTests
             var ingredients = dbContext.Ingredients.Select(
             i => new { i.IngredientId, i.OnHandQuantity, i.UnitCost, Value = i.UnitCost * i.OnHandQuantity }).
             OrderBy(i => i.IngredientId).ToList();
-            Assert.AreEqual(16, ingredients.Count);
+            Assert.AreEqual(1149, ingredients.Count);
             foreach (var i in ingredients)
             {
-                Console.WriteLine(p);
+                Console.WriteLine(i);
             }
         }
 
