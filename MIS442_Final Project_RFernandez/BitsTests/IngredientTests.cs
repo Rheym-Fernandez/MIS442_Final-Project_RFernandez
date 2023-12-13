@@ -19,7 +19,7 @@ namespace BitsTests
         public void Setup()
         {
             dbContext = new BitsContext();
-            dbContext.Database.ExecuteSqlRaw("call usp_testingResetData()");
+            //dbContext.Database.ExecuteSqlRaw("call usp_testingResetData()");
         }
 
         [Test]
@@ -38,10 +38,10 @@ namespace BitsTests
             i = new Ingredient();
             i.Name = "Test";
             i.Version = 1;
-            i.IngredientTypeId = 3;
-            i.OnHandQuantity = 0;
+            i.IngredientTypeId = 4;
+            i.OnHandQuantity = 10;
             i.UnitTypeId = 3;
-            i.UnitCost = 0;
+            i.UnitCost = 5;
             i.ReorderPoint = 0;
             i.Notes = "Test";
             dbContext.Ingredients.Add(i);
@@ -63,12 +63,14 @@ namespace BitsTests
         [Test]
         public void DeleteTest()
         {
-            //First finds the IngredientId of 1149 then removes it from the Ingredients table
-            i = dbContext.Ingredients.Find(1149);
+            //First finds the IngredientId of 1151 then removes it from the Ingredients table
+            i = dbContext.Ingredients.Find(1152);
             dbContext.Ingredients.Remove(i);
             dbContext.SaveChanges();
-            Assert.IsNull(dbContext.Ingredients.Find(1149));
+            Assert.IsNull(dbContext.Ingredients.Find(1152));
         }
+
+       
 
         /* [Test]
          public void GetByPrimaryKeyTest()
