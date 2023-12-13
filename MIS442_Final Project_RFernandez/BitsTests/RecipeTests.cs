@@ -84,6 +84,16 @@ namespace BitsTests
             Assert.IsNull(dbContext.Recipes.Find(9));
         }
 
+        [Test]
+        public void GetByPrimaryKeyTest()
+        {   //This code gets the recipe that has a code of 2
+            //Assert.AreEqual("Ore", s.StateName) means that the Primary Key "OR" is equivalent to "Ore"
+            r = dbContext.Recipes.Find(2);
+            Assert.IsNotNull(r);
+            Assert.AreEqual("Krampus' Special Sauce", r.Name);
+            Console.WriteLine(r);
+        }
+
         /*
         [Test]
         public void GetUsingWhere()
