@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\remfe\\Desktop\\FA2023\\MIS442\\MIS442_Final_Project\\MIS442_Final Project_RFernandez\\MIS442_Final Project_RFernandez\\MIS442_Final Project_RFernandez\\Bits.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\remfe\\Desktop\\FA2023\\MIS442\\MIS442_Final_Project\\MIS442_Final Project_RFernandez\\MIS442_Final Project_RFernandez\\MIS442_Final Project_RFernandez\\Bits.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\remfe\\Desktop\\FA2023\\MIS442\\MIS442_Final_Project\\MIS442_Final Project_RFernandez\\MIS442_Final Project_RFernandez\\MIS442_Final Project_RFernandez\\Bits.csproj",
+        "projectName": "Bits",
+        "projectPath": "C:\\Users\\remfe\\Desktop\\FA2023\\MIS442\\MIS442_Final_Project\\MIS442_Final Project_RFernandez\\MIS442_Final Project_RFernandez\\MIS442_Final Project_RFernandez\\Bits.csproj",
+        "packagesPath": "C:\\Users\\remfe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\remfe\\Desktop\\FA2023\\MIS442\\MIS442_Final_Project\\MIS442_Final Project_RFernandez\\MIS442_Final Project_RFernandez\\MIS442_Final Project_RFernandez\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\remfe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
