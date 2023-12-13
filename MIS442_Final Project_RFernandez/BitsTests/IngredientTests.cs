@@ -27,14 +27,41 @@ namespace BitsTests
         }
 
         [Test]
+        public void CreateTest()
+        { 
+            i = new Ingredient();
+            i.Name = "Test";
+            i.Version = 1;
+            i.IngredientTypeId = 3;
+            i.OnHandQuantity = 0;
+            i.UnitTypeId = 3;
+            i.UnitCost = 0;
+            i.ReorderPoint = 0;
+            i.Notes = "Test";
+            dbContext.Ingredients.Add(i);
+            dbContext.SaveChanges();
+            Assert.NotNull(dbContext.Ingredients.Where(i => i.Name == "Test" && i.Version == 1));
+        }
+
+        [Test]
+        public void UpdateTest()
+        {
+            c = dbContext.Customers.Find(2);
+            c.Address = "Test";
+            dbContext.Customers.Update(c);
+            dbContext.SaveChanges();
+            c = dbContext.Customers.Find(2);
+            Assert.AreEqual("Test", c.Address);
+        }
+
+        [Test]
         public void DeleteTest()
         {
-            //First finds the CustomerId of 1 then removes it from the Customers table
+            //First finds the IngredientId of 1149 then removes it from the Ingredients table
             i = dbContext.Ingredients.Find(1149);
             dbContext.Ingredients.Remove(i);
             dbContext.SaveChanges();
             Assert.IsNull(dbContext.Ingredients.Find(1149));
-
         }
 
         /* [Test]
