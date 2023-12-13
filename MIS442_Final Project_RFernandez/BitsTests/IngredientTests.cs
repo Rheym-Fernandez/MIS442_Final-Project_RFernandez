@@ -46,12 +46,12 @@ namespace BitsTests
         [Test]
         public void UpdateTest()
         {
-            c = dbContext.Customers.Find(2);
-            c.Address = "Test";
-            dbContext.Customers.Update(c);
+            i = dbContext.Ingredients.Find(1149);
+            i.Version = 1;
+            dbContext.Ingredients.Update(i);
             dbContext.SaveChanges();
-            c = dbContext.Customers.Find(2);
-            Assert.AreEqual("Test", c.Address);
+            i = dbContext.Ingredients.Find(1149);
+            Assert.AreEqual("Test", i.Version);
         }
 
         [Test]
