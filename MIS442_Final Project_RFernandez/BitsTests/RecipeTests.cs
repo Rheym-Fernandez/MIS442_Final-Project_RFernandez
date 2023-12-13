@@ -5,6 +5,7 @@ using System;
 using NUnit.Framework;
 using BitsEFClasses.Models;
 using Microsoft.EntityFrameworkCore;
+using NUnit.Framework.Constraints;
 
 namespace BitsTests
 {
@@ -82,7 +83,19 @@ namespace BitsTests
             dbContext.SaveChanges();
             Assert.IsNull(dbContext.Recipes.Find(9));
         }
-        
+
+        /*
+        [Test]
+        public void GetUsingWhere()
+        {
+            //The first line gets the name of the recipe where the actual efficiency is less than the estimated efficiency; then outputs it to a list.
+            //Code does not work
+            recipes = dbContext.Recipes.Where(r => r.Efficiency.Equals("call usp_selectRecipeEfficiency").OrderBy(r => r.Efficiency).ToList());
+            Assert.AreEqual(4, recipes.Count);
+            Assert.AreEqual("Alabama", recipes[0].Efficiency);
+            PrintAll(recipes);
+        }
+        */
 
         public void PrintAll(List<Recipe> recipes)
         {
