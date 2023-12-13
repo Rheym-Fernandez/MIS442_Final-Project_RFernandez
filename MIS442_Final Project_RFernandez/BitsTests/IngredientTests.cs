@@ -85,6 +85,16 @@ namespace BitsTests
             }
         }
 
+
+        [Test]
+        public void GetByPrimaryKeyTest()
+        {   //This code gets the ingredient that has a code of 2
+            i = dbContext.Ingredients.Find(2);
+            Assert.IsNotNull(i);
+            Assert.AreEqual("Lager Malt", i.Name);
+            Console.WriteLine(i);
+        }
+
         public void PrintAll(List<Ingredient> ingredients)
         {
             foreach (Ingredient i in ingredients)
