@@ -15,6 +15,12 @@ namespace BitsTests
         Ingredient? i;
         List<Ingredient>? ingredients;
 
+        [SetUp]
+        public void Setup()
+        {
+            dbContext = new BitsContext();
+            dbContext.Database.ExecuteSqlRaw("call usp_testingResetData()");
+        }
 
         [Test]
         public void GetAllTest()
@@ -51,7 +57,7 @@ namespace BitsTests
             dbContext.Ingredients.Update(i);
             dbContext.SaveChanges();
             i = dbContext.Ingredients.Find(1149);
-            Assert.AreEqual("Test", i.Version);
+            Assert.AreEqual(1, i.Version);
         }
 
         [Test]
