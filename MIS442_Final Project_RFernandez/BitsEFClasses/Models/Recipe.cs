@@ -15,27 +15,27 @@ public partial class Recipe
 
     public int StyleId { get; set; }
 
-    public decimal Volume { get; set; }
+    public double Volume { get; set; }
 
     public string Brewer { get; set; } = null!;
 
-    public decimal? BoilTime { get; set; }
+    public double? BoilTime { get; set; }
 
-    public decimal? BoilVolume { get; set; }
+    public double? BoilVolume { get; set; }
 
-    public decimal? Efficiency { get; set; }
+    public double? Efficiency { get; set; }
 
     public int? FermentationStages { get; set; }
 
-    public decimal? EstimatedOg { get; set; }
+    public double? EstimatedOg { get; set; }
 
-    public decimal? EstimatedFg { get; set; }
+    public double? EstimatedFg { get; set; }
 
-    public string? EstimatedColor { get; set; }
+    public double? EstimatedColor { get; set; }
 
-    public decimal? EstimatedAbv { get; set; }
+    public double? EstimatedAbv { get; set; }
 
-    public decimal? ActualEfficiency { get; set; }
+    public double? ActualEfficiency { get; set; }
 
     public int? EquipmentId { get; set; }
 
@@ -43,9 +43,9 @@ public partial class Recipe
 
     public sbyte? ForcedCarbonation { get; set; }
 
-    public int? KegPrimingFactor { get; set; }
+    public double? KegPrimingFactor { get; set; }
 
-    public decimal? CarbonationTemp { get; set; }
+    public double? CarbonationTemp { get; set; }
 
     public int? MashId { get; set; }
 

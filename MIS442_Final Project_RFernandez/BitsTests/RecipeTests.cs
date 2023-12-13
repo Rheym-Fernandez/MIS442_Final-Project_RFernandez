@@ -18,7 +18,7 @@ namespace BitsTests
         public void Setup()
         {
             dbContext = new BitsContext();
-            dbContext.Database.ExecuteSqlRaw("call usp_testingResetData()");
+           // dbContext.Database.ExecuteSqlRaw("call usp_testingResetData()");
         }
 
         [Test]
@@ -34,53 +34,55 @@ namespace BitsTests
         [Test]
         public void CreateTest()
         {
+            //Creates a new recipe named test
             r = new Recipe();
             r.Name = "Test Recipe";
             r.Version = 1;
             r.Date = null;
-            r.StyleId = 1000;
+            r.StyleId = 70;
             r.Volume = 30;
             r.Brewer = "Test Brewer";
-            r.BoilTime = "Test Brewer";
-            r.BoilVolume = "Test Brewer";
-            r.Efficiency = "Test Brewer";
-            r.FermentationStages = "Test Brewer";
-            r.EstimatedOg = "Test Brewer";
-            r.EstimatedFg = "Test Brewer";
-            r.EstimatedColor = "Test Brewer";
-            r.EstimatedAbv = "Test Brewer";
-            r.ActualEfficiency = "Test Brewer";
-            r.EquipmentId = "Test Brewer";
-            r.CarbonationUsed = "Test Brewer";
-            r.ForcedCarbonation = "Test Brewer";
-            r.KegPrimingFactor = "Test Brewer";
-            r.CarbonationTemp = "Test Brewer";
-            r.MashId = "Test Brewer";
+            r.BoilTime = 60;
+            r.BoilVolume = 45;
+            r.Efficiency = 70;
+            r.FermentationStages = 1;
+            r.EstimatedOg = 20;
+            r.EstimatedFg = 15;
+            r.EstimatedColor = 8;
+            r.EstimatedAbv = 7;
+            r.ActualEfficiency = 50;
+            r.EquipmentId = 1;
+            r.CarbonationUsed =  null;
+            r.ForcedCarbonation = null;
+            r.KegPrimingFactor = null;
+            r.CarbonationTemp = null;
+            r.MashId = 15;
             dbContext.Recipes.Add(r);
             dbContext.SaveChanges();
-            Assert.NotNull(dbContext.Ingredients.Where(i => i.Name == "Test" && i.Version == 1));
+            Assert.NotNull(dbContext.Ingredients.Where(r => r.Name == "Test" && r.Version == 1));
         }
 
         [Test]
         public void UpdateTest()
         {
-            i = dbContext.Ingredients.Find(1149);
-            i.Version = 1;
-            dbContext.Ingredients.Update(i);
+            r = dbContext.Recipes.Find(1);
+            r.Name = "Fuzzy Tales Juicy IPA";
+            dbContext.Recipes.Update(r);
             dbContext.SaveChanges();
-            i = dbContext.Ingredients.Find(1149);
-            Assert.AreEqual(1, i.Version);
+            r = dbContext.Recipes.Find(1);
+            Assert.AreEqual("Fuzzy Tales Juicy IPA", r.Name);
         }
 
         [Test]
         public void DeleteTest()
         {
-            //First finds the IngredientId of 1151 then removes it from the Ingredients table
-            i = dbContext.Ingredients.Find(1152);
-            dbContext.Ingredients.Remove(i);
+            //First finds the RecipeId of 8 then removes it from the Recipes table
+            r = dbContext.Recipes.Find(9);
+            dbContext.Recipes.Remove(r);
             dbContext.SaveChanges();
-            Assert.IsNull(dbContext.Ingredients.Find(1152));
+            Assert.IsNull(dbContext.Recipes.Find(9));
         }
+        
 
         public void PrintAll(List<Recipe> recipes)
         {
