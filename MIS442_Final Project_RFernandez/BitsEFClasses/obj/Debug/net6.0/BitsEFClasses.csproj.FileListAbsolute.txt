@@ -1,0 +1,14 @@
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\bin\Debug\net6.0\BitsEFClasses.deps.json
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\bin\Debug\net6.0\BitsEFClasses.runtimeconfig.json
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\bin\Debug\net6.0\BitsEFClasses.dll
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\bin\Debug\net6.0\BitsEFClasses.pdb
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\obj\Debug\net6.0\BitsEFClasses.csproj.AssemblyReference.cache
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\obj\Debug\net6.0\BitsEFClasses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\obj\Debug\net6.0\BitsEFClasses.AssemblyInfoInputs.cache
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\obj\Debug\net6.0\BitsEFClasses.AssemblyInfo.cs
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\obj\Debug\net6.0\BitsEFClasses.csproj.CoreCompileInputs.cache
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\obj\Debug\net6.0\BitsEFClasses.dll
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\obj\Debug\net6.0\refint\BitsEFClasses.dll
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\obj\Debug\net6.0\BitsEFClasses.pdb
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\obj\Debug\net6.0\BitsEFClasses.genruntimeconfig.cache
+C:\Users\remfe\Desktop\FA2023\MIS442\MIS442_Final_Project\MIS442_Final Project_RFernandez\MIS442_Final Project_RFernandez\BitsEFClasses\obj\Debug\net6.0\ref\BitsEFClasses.dll
