@@ -73,7 +73,8 @@ namespace BitsTests
         [Test]
         public void GetWithCalculatedFieldTest()
         {
-            // get a list of objects that include the productcode, unitprice, quantity and inventoryvalue
+            //This will get me the IngredientId and how many on hand I have for each ingredient; furthermore, it will also
+            //get me the total unit cost for each group of ingredients.
             var ingredients = dbContext.Ingredients.Select(
             i => new { i.IngredientId, i.OnHandQuantity, i.UnitCost, Value = i.UnitCost * i.OnHandQuantity }).
             OrderBy(i => i.IngredientId).ToList();
@@ -110,19 +111,6 @@ namespace BitsTests
              PrintAll(products);
          }
 
-         [Test]
-         public void GetWithCalculatedFieldTest()
-         {
-             // get a list of objects that include the productcode, unitprice, quantity and inventoryvalue
-             var products = dbContext.Products.Select(
-             p => new { p.ProductCode, p.UnitPrice, p.OnHandQuantity, Value = p.UnitPrice * p.OnHandQuantity }).
-             OrderBy(p => p.ProductCode).ToList();
-             Assert.AreEqual(16, products.Count);
-             foreach (var p in products)
-             {
-                 Console.WriteLine(p);
-             }
-         }
         */
         public void PrintAll(List<Ingredient> ingredients)
         {
