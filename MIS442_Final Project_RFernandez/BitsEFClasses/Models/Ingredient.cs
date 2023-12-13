@@ -13,7 +13,7 @@ public partial class Ingredient
 
     public int IngredientTypeId { get; set; }
 
-    public double OnHandQuantity { get; set; }
+    public decimal OnHandQuantity { get; set; }
 
     public int UnitTypeId { get; set; }
 

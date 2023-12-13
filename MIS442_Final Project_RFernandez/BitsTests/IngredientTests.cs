@@ -70,7 +70,20 @@ namespace BitsTests
             Assert.IsNull(dbContext.Ingredients.Find(1152));
         }
 
-       
+        [Test]
+        public void GetWithCalculatedFieldTest()
+        {
+            // get a list of objects that include the productcode, unitprice, quantity and inventoryvalue
+            var ingredients = dbContext.Ingredients.Select(
+            i => new { i.IngredientId, i.OnHandQuantity, i.UnitCost, Value = i.UnitCost * i.OnHandQuantity }).
+            OrderBy(i => i.IngredientId).ToList();
+            Assert.AreEqual(16, ingredients.Count);
+            foreach (var i in ingredients)
+            {
+                Console.WriteLine(p);
+            }
+        }
+
 
         /* [Test]
          public void GetByPrimaryKeyTest()
@@ -109,45 +122,6 @@ namespace BitsTests
              {
                  Console.WriteLine(p);
              }
-         }
-
-
-         [Test]
-         public void DeleteTest()
-         {   //NEEDS TO BE FIXED BECAUSE IT CANNOT WORK WIRH FOREIGN KEY CONSTRAINTS.
-             //This deletes the Product with the ProductCode A4VB
-             //Save Changes is necessary
-             //Issue with the foreign key constraints
-             p = dbContext.Products.Find("ABCD");
-             dbContext.Products.Remove(p);
-             dbContext.SaveChanges();
-             Assert.IsNull(dbContext.Products.Find("ABCD"));
-         }
-
-         [Test]
-         public void CreateTest()
-         {
-             //Must add first, then save.
-             //Then Assert that Product is not null, and look for it to make sure
-             //it was created.
-             p = new Product();
-             p.ProductCode = "ABCD";
-             p.Description = "New Product";
-             dbContext.Products.Add(p);
-             dbContext.SaveChanges();
-             Assert.IsNotNull(dbContext.Products.Find("ABCD"));
-         }
-
-         [Test]
-         public void UpdateTest()
-         {
-             p = dbContext.Products.Find("A4CS");
-             p.Description = "Test";
-             dbContext.Products.Update(p);
-             dbContext.SaveChanges();
-             p = dbContext.Products.Find("A4CS");
-             Assert.AreEqual("Test", p.Description);
-
          }
         */
         public void PrintAll(List<Ingredient> ingredients)
