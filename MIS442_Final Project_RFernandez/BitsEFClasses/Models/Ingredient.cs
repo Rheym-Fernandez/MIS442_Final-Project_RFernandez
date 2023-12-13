@@ -5,7 +5,7 @@ namespace BitsEFClasses.Models;
 
 public partial class Ingredient
 {
-    public int IngredientId { get; set; }
+    public int IngredientId { get; set; } 
 
     public string Name { get; set; } = null!;
 
